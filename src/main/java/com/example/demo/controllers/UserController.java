@@ -4,6 +4,8 @@ package com.example.demo.controllers;
 
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
+import lombok.Data;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
@@ -16,10 +18,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.awt.event.MouseEvent;
 import java.util.List;
 
-@Controller
+    @Controller
+    @Log
 public class UserController {
+
     private final UserService userService;
-@Autowired
+    @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
